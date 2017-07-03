@@ -8,10 +8,39 @@
     android:fitsSystemWindows="true"
     tools:context="jp.techacademy.natsuki.doai.taskapp.MainActivity">
 
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context="jp.techacademy.natsuki.doai.taskapp.MainActivity">
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:inputType="text"
+            android:text="" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/editText"
+            android:text="カテゴリ検索"
+            android:id="@+id/button1"/>
+
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="400dp"
+        android:layout_below="@+id/button1"
+        />
+
+    </RelativeLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
@@ -21,5 +50,6 @@
         android:layout_margin="16dp"
         android:src="@drawable/plus"
         app:backgroundTint="@color/colorPrimary"/>
+
 
 </android.support.design.widget.CoordinatorLayout>
